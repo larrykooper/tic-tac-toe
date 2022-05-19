@@ -11,8 +11,16 @@ class TestTicTacToe(unittest.TestCase):
         :param self:
         :return:
         """
+        # To make it faster I will use a helper method count(board, letter)
+        #   if both counts are <3 there can be no winner
         # The prod code will iterate thru all 8 paths and check each one for a win
-        #  so to test drive that
+        board = TicTacToe.initialize_board()
+        board[0][2]="O"
+        board[1][0]="O"
+        board[1][1]="X"
+        board[2][2]="X"
+        result = TicTacToe.detect_board_win(board)
+        self.assertFalse(result)
 
 
     def test_detect_win_false_1(self):
