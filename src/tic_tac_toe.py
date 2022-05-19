@@ -21,3 +21,17 @@ class TicTacToe:
     def initialize_board():
         board = [[""] * 3 for i in range(3)]
         return board
+
+    @staticmethod
+    def count(board, letter) -> int:
+        """
+        :param board:
+        :param letter:
+        :return: count of letter in board
+        """
+        count = 0
+        for i in range(3):
+            for j in range(3):
+                if board[i][j] == letter:
+                    count+= 1
+        return count             
