@@ -60,3 +60,16 @@ class TicTacToe:
                 if board[i][j] == letter:
                     count+= 1
         return count
+    @staticmethod
+    def display(board):
+        hr = "-----------"
+        print(" ")
+        for i in range(3):
+            row = ""
+            for j in range(3):
+                letter = " " if board[i][j] == "" else board[i][j]
+                row += letter + " | "
+            if i > 0:
+                print(hr)
+            print(row[:-1])
+
