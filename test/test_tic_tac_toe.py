@@ -33,7 +33,6 @@ class TestTicTacToe(unittest.TestCase):
         result = TicTacToe.count(board, "X")
         self.assertEqual(result, 2)
 
-
     def test_detect_path_win_false_1(self):
         """
         input is a triplet of cells

@@ -36,7 +36,11 @@ class TicTacToe:
         # Otherwise iterate thru all 8 paths and check each one for a win
         if TicTacToe.count(board, "X") < 3 and TicTacToe.count(board, "O") < 3:
             return False
-        # lkhere
+        for path in TicTacToe.WINPATHS:
+            win = TicTacToe.detect_path_win(board, path)
+            if win:
+                return True
+        return False
 
     @staticmethod
     def initialize_board():
