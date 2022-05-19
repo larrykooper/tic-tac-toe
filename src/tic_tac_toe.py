@@ -1,4 +1,5 @@
 class TicTacToe:
 
-    def detect_win(self):
-        pass 
+    @staticmethod
+    def detect_win(path: tuple) -> bool:
+        return True
