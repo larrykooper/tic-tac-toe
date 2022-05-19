@@ -4,6 +4,11 @@ class TicTacToe:
 
     @staticmethod
     def detect_win(board: List, path: List) -> bool:
+        """
+        :param board: Tic tac toe board (2d matrix of letters)
+        :param path: triplet of cells
+        :return: True if a win on path detected
+        """
         cell = []
         for i in range(3):
             cell.append(board[path[i][0]][path[i][1]])
