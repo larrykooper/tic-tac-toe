@@ -12,3 +12,7 @@ class TicTacToe:
         else:
             return False
 
+    @staticmethod
+    def initialize_board():
+        board = [[""] * 3 for i in range(3)]
+        return board

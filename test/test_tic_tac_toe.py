@@ -15,15 +15,27 @@ class TestTicTacToe(unittest.TestCase):
         #  so to test drive that
 
 
-    def test_detect_win(self):
+    def test_detect_win_false(self):
         """
         input is a triplet of cells
         output is true (win) or false (no win)
         :param self:
         :return:
         """
-        board = [[""]*3 for i in range(3)]
+        board = TicTacToe.initialize_board()
         path = [[0,0],[1,1],[2,2]]
         result = TicTacToe.detect_win(board, path)
         self.assertFalse(result)
+
+    def test_detect_win_true(self):
+        board = TicTacToe.initialize_board()
+        for i in range(3):
+            board[0][i] = "X"
+        path=[[0,0],[0,1],[0,2]]
+        result = TicTacToe.detect_win(board, path)
+        self.assertTrue(result)
+
+
+
+
 
