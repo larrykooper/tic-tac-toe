@@ -5,8 +5,6 @@ class TestTicTacToe(unittest.TestCase):
 
 
 
-
-
     def test_detect_win_board(self):
         """
         See if either player has won, given the board
@@ -24,7 +22,7 @@ class TestTicTacToe(unittest.TestCase):
         :param self:
         :return:
         """
-        input = ((0,0),(1,1),(2,2))
-        result = TicTacToe.detect_win(input)
+        path = [[0,0],[1,1],[2,2]]
+        result = TicTacToe.detect_win(path)
         self.assertFalse(result)
 
