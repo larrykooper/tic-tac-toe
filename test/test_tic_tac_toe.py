@@ -48,7 +48,7 @@ class TestTicTacToe(unittest.TestCase):
         board = TicTacToe.initialize_board()
         for i in range(3):
             board[0][i] = "X"
-        path=[[0,0],[0,1],[0,2]]
+        path = TicTacToe.WINPATHS[0]
         result = TicTacToe.detect_path_win(board, path)
         self.assertTrue(result)
 
@@ -57,7 +57,7 @@ class TestTicTacToe(unittest.TestCase):
         board[1][0]="X"
         board[1][1]="O"
         board[1][2]="X"
-        path=[[1,0],[1,1],[1,2]]
+        path = TicTacToe.WINPATHS[1]
         result = TicTacToe.detect_path_win(board, path)
         self.assertFalse(result)
 
