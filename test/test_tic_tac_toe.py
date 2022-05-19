@@ -40,7 +40,7 @@ class TestTicTacToe(unittest.TestCase):
         returns true (win) or false (no win)
         """
         board = TicTacToe.initialize_board()
-        path = [[0,0],[1,1],[2,2]]
+        path =  TicTacToe.WINPATHS[6]
         result = TicTacToe.detect_path_win(board, path)
         self.assertFalse(result)
 
