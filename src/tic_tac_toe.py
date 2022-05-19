@@ -18,9 +18,13 @@ class TicTacToe:
             return False
 
     @staticmethod
-    def detect_board_win(board: List):
+    def detect_board_win(board: List) -> bool:
+        # See if either player has won, given the board
+        # To make it faster I will use a helper method count(board, letter)
+        #   if both counts are <3 there can be no winner
+        # Otherwise iterate thru all 8 paths and check each one for a win
         if TicTacToe.count(board, "X") < 3 and TicTacToe.count(board, "O") < 3:
-            return False 
+            return False
 
     @staticmethod
     def initialize_board():

@@ -5,20 +5,22 @@ class TestTicTacToe(unittest.TestCase):
 
 
 
-    def test_detect_board_win(self):
-        """
-        See if either player has won, given the board
-        :param self:
-        :return:
-        """
-        # To make it faster I will use a helper method count(board, letter)
-        #   if both counts are <3 there can be no winner
-        # The prod code will iterate thru all 8 paths and check each one for a win
+    def test_detect_board_win_false_1(self):
         board = TicTacToe.initialize_board()
         board[0][2]="O"
         board[1][0]="O"
         board[1][1]="X"
         board[2][2]="X"
+        result = TicTacToe.detect_board_win(board)
+        self.assertFalse(result)
+
+    def test_detect_board_win_false_2(self):
+        board = TicTacToe.initialize_board()
+        board[0][2] = "O"
+        board[1][0] = "O"
+        board[1][1] = "X"
+        board[2][2] = "X"
+        board[1][2] = "X"
         result = TicTacToe.detect_board_win(board)
         self.assertFalse(result)
 
