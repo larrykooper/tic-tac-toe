@@ -3,7 +3,7 @@ from typing import List
 class TicTacToe:
 
     @staticmethod
-    def detect_win(board: List, path: List) -> bool:
+    def detect_path_win(board: List, path: List) -> bool:
         """
         :param board: Tic tac toe board (2d matrix of letters)
         :param path: triplet of cells
@@ -16,6 +16,11 @@ class TicTacToe:
             return True
         else:
             return False
+
+    @staticmethod
+    def detect_board_win(board: List):
+        if TicTacToe.count(board, "X") < 3 and TicTacToe.count(board, "O") < 3:
+            return False 
 
     @staticmethod
     def initialize_board():
@@ -34,4 +39,4 @@ class TicTacToe:
             for j in range(3):
                 if board[i][j] == letter:
                     count+= 1
-        return count             
+        return count
