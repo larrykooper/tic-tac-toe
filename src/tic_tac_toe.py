@@ -1,2 +1,4 @@
 class TicTacToe:
-    pass
+
+    def detect_win(self):
+        pass 
