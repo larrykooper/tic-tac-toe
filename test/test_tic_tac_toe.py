@@ -35,8 +35,7 @@ class TestTicTacToe(unittest.TestCase):
         board[2][2] = "X"
         board[1][2] = "X"
         result = TicTacToe.detect_board_win(board)
-        self.assertFalse(result)
-
+        self.assertTrue(result)
 
     def test_count(self):
         board = TicTacToe.initialize_board()
