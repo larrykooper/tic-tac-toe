@@ -22,7 +22,8 @@ class TestTicTacToe(unittest.TestCase):
         :param self:
         :return:
         """
+        board = [[""]*3 for i in range(3)]
         path = [[0,0],[1,1],[2,2]]
-        result = TicTacToe.detect_win(path)
+        result = TicTacToe.detect_win(board, path)
         self.assertFalse(result)
 
