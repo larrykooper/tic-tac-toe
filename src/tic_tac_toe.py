@@ -2,6 +2,17 @@ from typing import List
 
 class TicTacToe:
 
+    WINPATHS = [
+        [[0,0],[0,1],[0,2]],
+        [[1,0],[1,1],[1,2]],
+        [[2,0],[2,1],[2,2]],
+        [[0,0],[1,0],[2,0]],
+        [[0,1],[1,1],[2,1]],
+        [[0,2],[1,2],[2,2]],
+        [[0,0],[1,1],[2,2]],
+        [[0,2],[1,1],[2,0]]
+    ]
+
     @staticmethod
     def detect_path_win(board: List, path: List) -> bool:
         """
@@ -25,6 +36,7 @@ class TicTacToe:
         # Otherwise iterate thru all 8 paths and check each one for a win
         if TicTacToe.count(board, "X") < 3 and TicTacToe.count(board, "O") < 3:
             return False
+        # lkhere
 
     @staticmethod
     def initialize_board():
