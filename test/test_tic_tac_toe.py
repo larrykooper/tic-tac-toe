@@ -1,4 +1,5 @@
 import unittest
+from src.tic_tac_toe import TicTacToe
 
 class TestTicTacToe(unittest.TestCase):
 
